@@ -1,0 +1,115 @@
+body {
+	background: #EBF2FA;
+	font-family: Arial, sans-serif;
+}
+
+a {
+	color: darkred;
+	font-weight: bold;
+	text-decoration-style: dotted;
+}
+
+div {
+	background-color: #7CAADE;
+}
+
+.bodygraf {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 12px;
+	font-style: italic;
+}
+
+.one {
+	/*Add some border and/or padding here.*/
+	paddintg-top: 10px;
+    padding-bottom: 10px;
+    border-bottom:  2px solid black;
+}
+
+.two {
+	margin-top: 20px;
+	margin-bottom: 25px;
+	/*Tweak the padding settings below and see what happens.*/
+    padding:  100px 100px 100px 100px;
+	border: 1px black solid;
+	max-width:  900px;
+}
+
+.two-content {
+	background-color: #064789;
+	padding: 1px 4px;
+	color: white;
+}
+
+.two-content h3 {
+	margin-top: 4px;
+}
+
+.two-content p {
+	margin-bottom: 4px;
+}
+
+/*For padding and border, there is a shorthand way of doing the same thing as
+ above:
+
+	padding: TOP RIGHT BOTTOM LEFT;
+	padding: 100px 100px 100px 100px;
+
+	OR
+
+	padding: TOP&BOTTOM RIGHT&LEFT;
+	padding: 100px 100px;
+
+	OR
+
+	padding: ALL SIDES AT ONCE;
+	padding: 100px;
+*/
+
+/*Note the padding shorthand usage for the next selectors.*/
+
+.three {
+	margin-top: 20px;
+	padding: 10px 15px;
+	border: 1px solid black;
+	max-width:  700px;
+}
+
+.four {
+	margin-top: 20px;
+	padding: 10px 15px;
+	border: 1px solid black;
+	max-width: 700px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.five {
+	margin-top: 20px;
+	padding: 10px 15px;
+	border: 1px solid black;
+	max-width:  700px;
+	margin-left:  auto;
+	margin-right:  0px;
+}
+
+.six {
+	background-color: white;
+	margin-top: 20px;
+	padding: 10px 15px;
+	max-width:  500px;
+	margin-right:  auto;
+	margin-left:  auto;
+}
+
+.seven {
+	margin-top: 20px;
+	padding: 10px 15px;
+	border: 1px solid black;
+}
+
+img {
+	width:  100%;
+	/*Set the image's width property here.*/
+}

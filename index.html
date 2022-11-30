@@ -1,38 +1,68 @@
-<!doctype html>
-<html lang="en">
-  <head>
+<!DOCTYPE html>
+<html>
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="main.css">
+  <title>The box model - padding, borders, margins</title>
+</head>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<body>
 
-    <title>Embed Example</title>
-  </head>
-  <body>
+  <p class="bodygraf">Reminder: Unless you change it with CSS, the body element will have a margin on all sides of 8px by default.</p>
 
-    <div class="container">
+  <div class="one">
+    <h3>1</h3>
+    <p>By default, content division elements (divs) have no padding, margin or border. They extend horizontally as wide as possible but tightly conform to the top and bottom of whatever content's inside.</p>
+    <p>Heading and paragraph elements have top and bottom margins by default that add vertical distance from other HTML elements.</p>
+    <p>Try adding a border or padding to the top and bottom of this div and see what happens.</p>
+    <p>Also, if you're curious about the box model we're messing with here, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model" target="_blank">this is an overview</a>.</p>
+  </div>
 
-      <div class="row">
-        <header class="col bg-secondary text-white p-2 mb-4">
-          <h3 class="mb-1">JNL 221 Admission Percentages 2020-21 Chart</h3>
-        </header>
+  <div class="two">
+      <div class="two-content">
+        <h3>2</h3>
+        <p>Try some different padding settings on this div (look for the <strong>class="two"</strong> selector). I already did that.
+        </p>
       </div>
+  </div>
 
-      <div class="row">
-        <div class="col-lg-8">
+  <div class="three">
+    <h3>3</h3>
+    <p>We're primarily concerned right now with vertical layouts — getting our HTML content to stack nicely on desktop and mobile screens.</p>
+    <p>Setting a <strong>max-width</strong> is helpful for this. It helps keep text, images and data visualizations from taking up the entire width of a large screen. You provide a maximum width that an element, like a <strong>div</strong>, can't exceed. But it can get narrower as the screen shrinks.</p>
+    <p>In the CSS file, give this div a <strong>max-width</strong> of <em>700px</em>.</p>
+  </div>
 
-          <!-- PLACE YOUR DATAWRAPPER <iframe> UNDERNEATH ME! --><iframe title="Male vs Female Admissions for Colleges with Under 15% Acceptance Rate" aria-label="Dot Plot" id="datawrapper-chart-aD3pQ" src="https://datawrapper.dwcdn.net/aD3pQ/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="714"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-</script>
+  <div class="four">
+    <h3>4</h3>
+    <p>How can we get this <strong>div</strong> get horizontally centered?</p>
+    <p>Use the same <strong>max-width</strong> attribute as the <strong>div</strong> above, but set the left and right margins to "<em>auto</em>", which means they're calculated automatically based on the width of the browser window.</p>
+    <p>This allows the <strong>div</strong> to hang out in the middle. As the screen gets narrower, the margins will eventually shrink away to nothing and it'll take up the full width.</p>
+    <p>(This is similar to how your recipe text was centered on the webpage in an earlier in-class activity, if you go back to peek at the CSS).</p>
+  </div>
 
-        </div>
+  <div class="five">
+    <h3>5</h3>
+    <p>We can also have the <strong>div</strong> hang out on the far right. Use the same properties as the one above, except set the <strong>margin-left</strong> to "<em>auto</em>" and the <strong>margin-right</strong> to <em>0</em>.</p>
+    <p>If you're wondering how we can start to stack elements horizontally as well as vertically — we're going to get there. Just not today.</p>
+  </div>
 
-      </div>
+  <div class="six">
+    <h3>6</h3>
+    <p>We can also put our embed code (<strong>iframe</strong>) from Datawrapper inside a <strong>div</strong> to have more control over how to looks in comparison to the rest of our webpage.</p>
+    <p>This is copy/pasted from Datawrapper with "responsive iframe" selected. The <strong>background-color</strong> for this specific <strong>div</strong> has been changed to <em>white</em> to override the background color. Intense ones could wash out the color palette!</p>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <iframe title="Median household income (JNL 221.3)" aria-label="Map" id="datawrapper-chart-QPzVR" src="https://datawrapper.dwcdn.net/QPzVR/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="607"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+  </div>
 
-  </body>
+  <div class="seven">
+    <h3>7</h3>
+    <p>Images will display in their native dimensions unless you adjust with CSS. Setting an image's <strong>width</strong> to <strong>100%</strong> means it will occupy the full horizontal space of its enclosing element — no more, no less.</p>
+    <img src="https://static01.nyt.com/images/2022/11/09/multimedia/09nycm-lokedi1-1-5e62/09nycm-lokedi1-1-5e62-superJumbo.jpg" alt="An image of Sharon Lokedi holding the Kenyan flag.">
+  </div>
+
+</body>
+
 </html>
